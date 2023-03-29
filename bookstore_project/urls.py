@@ -18,8 +18,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Page sapp
-    path('', include('pages.urls')),
     # User Management
     path('accounts/', include('django.contrib.auth.urls')),
+    # Local apps
+    path('accounts/', include('users.urls')),
+    path('', include('pages.urls')),
 ]
