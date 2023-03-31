@@ -157,6 +157,9 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+# Remember Me -> remembers user session 
+ACCOUNT_SESSION_REMEMBER = True
+
 # Email SMPT config -> currently console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
