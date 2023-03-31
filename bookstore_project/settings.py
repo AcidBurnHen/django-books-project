@@ -37,10 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    # Thid-party
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+
     # Local
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig'
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Custom user
 AUTH_USER_MODEL = 'users.CustomUser' 
