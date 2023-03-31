@@ -147,5 +147,19 @@ STATICFILES_FINDERS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# ------ Overriden Settings ------
+# Site ID for django sites package
+SITE_ID = 1
+
+# Django-allauth config
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+# Email SMPT config -> currently console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home' 
+ACCOUNT_LOGOUT_REDIRECT = 'home'
