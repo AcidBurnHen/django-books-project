@@ -9,6 +9,9 @@ services:
       - "./manage.py"
       - "runserver"
       - "0.0.0.0:8000"
+    environment:
+      - SECRET_KEY=django-insecure--sn*c)*w+%8m(ebhk!uw(kbid#dqj!&pvlv#*gs8^gkv^d*(p&
+      - DEBUG=1
     volumes:
       - .:/books
     ports:

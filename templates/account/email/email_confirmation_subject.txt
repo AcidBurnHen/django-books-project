@@ -1,0 +1,4 @@
+{% load i18n %}
+{% autoescape off %}
+{% blocktranslate %}Confirm Your E-mail Address{% endblocktranslate %}
+{% endautoescape %}

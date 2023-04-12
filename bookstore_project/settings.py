@@ -20,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--sn*c)*w+%8m(ebhk!uw(kbid#dqj!&pvlv#*gs8^gkv^d*(p&'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = int(os.environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = []
 
@@ -167,6 +167,9 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 # Email SMPT config -> currently console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Custom from email for django-allauth email sending
+DEFAULT_FROM_EMAIL = 'admin@website.com'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home' 
